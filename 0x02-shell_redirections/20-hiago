@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "This is a test with some Cs and cs" | tr -d 'cC'
