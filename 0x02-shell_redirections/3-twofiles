@@ -1,2 +1,2 @@
 #!/bin/bash
-Cat /etc/passed | cat /etc/hosts
+Cat /etc/passwd | cat /etc/hosts
