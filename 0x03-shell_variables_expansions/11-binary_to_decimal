@@ -1,0 +1,2 @@
+#!/bin/bash
+[ -n "$BINARY" ] && echo "Decimal: $((2#${BINARY}))" || echo "BINARY environment variable is not set."
