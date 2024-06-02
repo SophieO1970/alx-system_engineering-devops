@@ -8,18 +8,13 @@
 #   ufw-before-forward
 #
 
-# This is to redirect traffic going to port 8080 to port 80
-*nat
+# Redirect requests from port 8080/tcp to 80/tcp*nat
 :PREROUTING ACCEPT [0:0]
 -A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
-COMMIT
-
-
+COMMIT                                          
 # Don't delete these required lines, otherwise there will be errors
-*filter
-:ufw-before-input - [0:0]
-:ufw-before-output - [0:0]
-:ufw-before-forward - [0:0]
+*filter                                         :ufw-before-input - [0:0]
+:ufw-before-output - [0:0]                      :ufw-before-forward - [0:0]
 :ufw-not-local - [0:0]
 # End required lines
 
